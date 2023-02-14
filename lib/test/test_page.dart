@@ -127,6 +127,8 @@ class _TestPageState extends State<TestPage> {
                   onKey: handleNumberInputKey,
                   child: TextFormField(
                     controller: widget.controller,
+                    enabled: widget.readOnly,
+                    validator:widget.validator ,
                     decoration:  InputDecoration(    enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(width: 2, color: widget.borderColor??Colors.blueAccent) )),
                     textInputAction: widget.enterPress == true ? TextInputAction.done : null,
